@@ -415,9 +415,6 @@ a p {
     padding-top: 19px;
     padding-bottom: 19px;
 }
-.menu__list-item_active {
-    color: #7E7E82;
-}
 .menu__header-item {
     position: relative;
     transition-duration: 0.5s;
@@ -459,7 +456,13 @@ a p {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-.menu__list-item:nth-child(1)::before {
+input[type="radio"] {
+    display: none;
+}
+.menu__radio:checked ~ .menu__list-item {
+    color: #7E7E82;
+}
+.menu__radio:checked ~ .menu__list-item::before {
     display: block;
 }
 .menu-footer {
