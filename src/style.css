@@ -1,4 +1,6 @@
-@font-face {
+/* @import 'node_modules/swiper/swiper-bundle.css'; */
+
+/* @font-face {
     font-family: 'TT Lakes Regular';
     src: url('fonts/TTLakes-Regular.eot');
     src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
@@ -24,8 +26,14 @@
     url('fonts/TTLakes-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
+
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
 
 html {
     box-sizing: border-box;
