@@ -19,16 +19,16 @@ module.exports = {
             template: './index.html'
         }),
         new HTMLWebpackPlugin({
-            filename: 'block1.3.html',
-            template: './block1.3.html'
+            filename: 'main.html',
+            template: './main.html'
         }),
         new HTMLWebpackPlugin({
             filename: 'menu.html',
             template: './menu.html'
         }),
         new HTMLWebpackPlugin({
-            filename: 'block1.5.html',
-            template: './block1.5.html'
+            filename: 'brands.html',
+            template: './brands.html'
         }),
         new MiniCssExtractPlugin(),
         new CleanWebpackPlugin()
