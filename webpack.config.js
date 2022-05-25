@@ -1,6 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -9,6 +10,9 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    devServer: {
+        static: './dist',
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -26,6 +30,7 @@ module.exports = {
             filename: 'block1.5.html',
             template: './block1.5.html'
         }),
+        new MiniCssExtractPlugin(),
         new CleanWebpackPlugin()
     ],
     module: {
@@ -35,37 +40,23 @@ module.exports = {
                 loader: "html-loader",
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-                generator: {
-                    filename: '[name].[ext]'
-                }
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[name].[ext]'
+                    filename: 'images/[name][ext]'
                 }
             },
             {
-                test: /\.svg$/,
-                use: [{
-                    loader: 'svg-inline-loader',
-                    options: {
-                      name: 'img/[name].[ext]'
-                    }
-                }]
-            },
-            {
-                test: /\.svg$/,
-                use: {
-                  loader: "svg-url-loader",
-                  options: {
-                    name: 'img/[name].[ext]'
-                  }
-                },
-              }
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]'
+                }
+            }
         ]
     }
 }

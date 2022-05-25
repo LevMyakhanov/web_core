@@ -1,6 +1,8 @@
-/* @import 'node_modules/swiper/swiper-bundle.css'; */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
-/* @font-face {
+@font-face {
     font-family: 'TT Lakes Regular';
     src: url('fonts/TTLakes-Regular.eot');
     src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
@@ -26,14 +28,92 @@
     url('fonts/TTLakes-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-} */
-
-
-
-.swiper {
-    width: 600px;
-    height: 300px;
 }
+
+
+.brands-wrapper {
+    width: 320px;
+    border-top: 1px solid #D9FFF5; 
+    padding-bottom: 38px;
+    background-color: #F8F8F8;
+    overflow: hidden;
+    box-shadow: inset -30px 0 30px -30px #fff;
+}
+
+.brands-header {
+    height: 80px;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    margin-bottom: 32px;
+    padding: 16px;
+    background-image: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+}
+.swiper {
+    width: 240px;
+    margin: 0;
+    overflow: visible;
+    padding-left: 16px;
+}
+.swiper-wrapper {
+    box-sizing: border-box;
+}
+.swiper-slide {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    padding-left: 16px;
+    background-color: #fff;
+}
+.swiper-button-next {
+    width: 40px;
+    height: 40px;
+    background-image: url("img/arrow_forward.png");
+    right: 20px;
+    top: 36%;
+}
+.swiper-button-next:after {
+    display: none;
+}
+.swiper-pagination {
+    position: static;
+    margin-top: 16px;
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #DDDDDD;
+}
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+}
+.brands {
+    display: flex;
+    padding: 24px;
+    flex-wrap: wrap;
+    margin-right: -24px;
+    margin-bottom: -16px;
+    justify-content: space-evenly;
+}
+.brands__items {
+    width: 224px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    margin-right: 24px;
+    margin-bottom: 16px;
+}
+
+
 
 html {
     box-sizing: border-box;
@@ -553,6 +633,19 @@ input[type="radio"] {
     .main_img {
         height: 208px;
         border-radius: 6px;
+    }
+}
+
+@media (min-width: 550px) {
+    .swiper {
+        display: none;
+    }
+    .brands-wrapper {
+        width: 100%;
+        overflow: visible;
+    }
+    .brands-header {
+        padding: 15px 24px;
     }
 }
 

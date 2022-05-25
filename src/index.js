@@ -1,9 +1,32 @@
-import mySwiper from './block1.5.js'
-import "./index.html";
-import "./block1.3.html";
-import "./block1.5.html";
-import "./menu.html";
 import './style.css'
+import Swiper, { Navigation, Pagination } from 'swiper';
+
+Swiper.use([Navigation, Pagination]);
+
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    spaceBetween: 16,
+  });
 
 
 
@@ -33,8 +56,8 @@ function toggleText () {
 
 button.addEventListener("click", toggleText);
 
-// for (let i = 0; i < thumbnails.length; i++) {
-    
-// }
 
-// console.log();
+
+
+
+
