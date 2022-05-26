@@ -1,7 +1,7 @@
 import './style.css';
 import Swiper, { Navigation, Pagination } from 'swiper';
-import {showMainText, mainButton} from './js/main';
-import {showBrandIcons, buttonsBrands} from './js/brands';
+import {button, toggleText} from './js/main';
+import {buttonBrands, toggleBrand} from './js/brands';
 
 
 Swiper.use([Navigation, Pagination]);
@@ -31,28 +31,5 @@ const swiper = new Swiper('.swiper', {
   });
 
   
-
-let showHideContent = function (object) {
-
-
-  object.contentHidden.classList.toggle(object.contentHidden)
-  object.contentHidden.classList.toggle(object.contentOpen)
-  
-
-  if (object.flag) {
-    object.mainButtonShow.style.display = 'none';
-    object.mainButtonHide.style.display = 'block';
-    object.flag = false;
-    return object.flag;
-  } 
-  if (object.flag) {
-    object.mainButtonShow.style.display = 'block';
-    object.mainButtonHide.style.display = 'none';
-    object.flag = true;
-    return object.flag;
-  }
-}
-
-
-mainButton.addEventListener('click', showHideContent(showMainText))
-buttonsBrands.addEventListener('click', showHideContent(showBrandIcons))
+  buttonBrands.addEventListener('click', toggleBrand)
+  button.addEventListener('click', toggleText)
