@@ -1,7 +1,6 @@
 
 
 .brands-wrapper {
-    width: 320px;
     border-top: 1px solid #D9FFF5; 
     padding-bottom: 38px;
     background-color: #F8F8F8;
@@ -28,9 +27,20 @@
     flex-wrap: wrap;
     margin-right: -24px;
     margin-bottom: -16px;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+.brands__hidden {
+    max-height: 200px;
+    overflow-y: hidden;
+    display: none;
+    padding: 24px;
+    flex-wrap: wrap;
+    margin-right: -24px;
+    margin-bottom: -16px;
+    justify-content: space-between;
 }
 .brands__items {
+    position: relative;
     width: 224px;
     height: 72px;
     display: flex;
@@ -42,14 +52,66 @@
     margin-right: 24px;
     margin-bottom: 16px;
 }
-.button-brands {
+.brands__items::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/arrow_forward.png');
+    right: 16px;
+}
+.buttons-show-hide {
     display: none;
+    margin-top: 24px;
+}
+.button-brands_show {
+    position: relative;
+    margin-left: 57px;
+}
+.button-brands_hide {
+    position: relative;
+    display: none;
+}
+.button-brands_show::before,
+.button-brands_show::after,
+.button-brands_hide::before,
+.button-brands_hide::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid #41f6d7;
+    border-bottom: 2px solid #41f6d7;
+    border-radius: 2px;
+}
+.button-brands_show::before {
+    transform: rotate(-45deg);
+    bottom: 8px;
+    left: -16px;
+}
+.button-brands_show::after {
+    transform: rotate(-45deg);
+    top: 5px;
+    left: -16px;
+}
+.button-brands_hide::before {
+    transform: rotate(135deg);
+    bottom: 6px;
+    left: -16px;
+}
+.button-brands_hide::after {
+    transform: rotate(135deg);
+    top: 7px;
+    left: -16px;
 }
 
 
 
 @media (min-width: 550px) {
     .brands {
+        display: flex;
+    }
+    .brands__hidden {
         display: flex;
     }
     .brands-wrapper {
@@ -59,7 +121,7 @@
     .brands-header {
         padding: 15px 24px;
     }
-    .button-brands {
+    .buttons-show-hide {
         display: block;
     }
 }

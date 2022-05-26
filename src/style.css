@@ -49,6 +49,10 @@ a {
 body {
     margin: 0;
     padding: 0;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
 }
 h1 {
     margin: 0;
@@ -62,8 +66,6 @@ p {
 
 .body-nav {
     padding: 50px;
-    font-family: 'TT Lakes Regular', sans-serif;
-    letter-spacing: -0.2px;
     color: #1B1C21;
 }
 .body-nav > h1 {

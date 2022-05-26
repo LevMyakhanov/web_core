@@ -26,7 +26,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./style.css\");\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ \"../node_modules/swiper/swiper.esm.js\");\n\r\n\r\n// import './js/main.js'\r\n\r\n\r\nswiper__WEBPACK_IMPORTED_MODULE_1__[\"default\"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination]);\r\n\r\n\r\nconst swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('.swiper', {\r\n    // Optional parameters\r\n    direction: 'horizontal',\r\n    loop: true,\r\n  \r\n    // If we need pagination\r\n    pagination: {\r\n      el: '.swiper-pagination',\r\n      clickable: true\r\n    },\r\n  \r\n    // Navigation arrows\r\n    navigation: {\r\n      nextEl: '.swiper-button-next',\r\n      prevEl: '.swiper-button-prev'\r\n    },\r\n  \r\n    // And if we need scrollbar\r\n    scrollbar: {\r\n      el: '.swiper-scrollbar',\r\n    },\r\n    spaceBetween: 16,\r\n  });\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./style.css\");\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ \"../node_modules/swiper/swiper.esm.js\");\n/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/main */ \"./js/main.js\");\n/* harmony import */ var _js_brands__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/brands */ \"./js/brands.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nswiper__WEBPACK_IMPORTED_MODULE_1__[\"default\"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination]);\r\n\r\nconst swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('.swiper', {\r\n    // Optional parameters\r\n    direction: 'horizontal',\r\n    loop: true,\r\n  \r\n    // If we need pagination\r\n    pagination: {\r\n      el: '.swiper-pagination',\r\n      clickable: true\r\n    },\r\n  \r\n    // Navigation arrows\r\n    navigation: {\r\n      nextEl: '.swiper-button-next',\r\n      prevEl: '.swiper-button-prev'\r\n    },\r\n  \r\n    // And if we need scrollbar\r\n    scrollbar: {\r\n      el: '.swiper-scrollbar',\r\n    },\r\n    spaceBetween: 16,\r\n  });\r\n\r\n  \r\n\r\nlet showHideContent = function (object) {\r\n\r\n\r\n  object.contentHidden.classList.toggle('main__text_hidden')\r\n  object.contentHidden.classList.toggle(object.contentOpen)\r\n  \r\n\r\n  if (object.flag) {\r\n    object.mainButtonShow.style.display = 'none';\r\n    object.mainButtonHide.style.display = 'block';\r\n    object.flag = false;\r\n    return object.flag;\r\n  } \r\n  if (object.flag) {\r\n    object.mainButtonShow.style.display = 'block';\r\n    object.mainButtonHide.style.display = 'none';\r\n    object.flag = true;\r\n    return object.flag;\r\n  }\r\n}\r\n\r\n\r\n_js_main__WEBPACK_IMPORTED_MODULE_2__.mainButton.addEventListener('click', showHideContent(_js_main__WEBPACK_IMPORTED_MODULE_2__.showMainText))\r\n_js_brands__WEBPACK_IMPORTED_MODULE_3__.buttonsBrands.addEventListener('click', showHideContent(_js_brands__WEBPACK_IMPORTED_MODULE_3__.showBrandIcons))\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./js/brands.js":
+/*!**********************!*\
+  !*** ./js/brands.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"buttonsBrands\": () => (/* binding */ buttonsBrands),\n/* harmony export */   \"showBrandIcons\": () => (/* binding */ showBrandIcons)\n/* harmony export */ });\nlet showBrandIcons = {\r\n    contentOpen: document.querySelector(\".brands\"),\r\n    contentHidden: document.querySelector(\".brands__hidden\"),\r\n    mainButtonShow: document.querySelector(\".button-brands_show\"),\r\n    mainButtonHide: document.querySelector(\".button-brands_hide\"),\r\n    flag: true\r\n}\r\n\r\nlet buttonsBrands = document.querySelector(\".buttons-show-hide\")\n\n//# sourceURL=webpack:///./js/brands.js?");
+
+/***/ }),
+
+/***/ "./js/main.js":
+/*!********************!*\
+  !*** ./js/main.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"mainButton\": () => (/* binding */ mainButton),\n/* harmony export */   \"showMainText\": () => (/* binding */ showMainText)\n/* harmony export */ });\nlet showMainText = {\r\n    contentOpen: document.querySelector(\".main__text\"),\r\n    contentHidden: document.querySelector(\".main__text_hidden\"),\r\n    mainButtonShow: document.querySelector(\".main__text_next\"),\r\n    mainButtonHide: document.querySelector(\".main__text_hide\"),\r\n    flag: true\r\n}\r\n\r\nlet mainButton = document.querySelector(\".main__button\")\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
