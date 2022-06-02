@@ -2,9 +2,10 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 @import 'styles/brands.css';
+@import 'styles/prices.css';
 @import 'styles/main.css';
 @import 'styles/menu.css';
-
+@import 'styles/modal-feedback.css';
 
 
 @font-face {
@@ -53,6 +54,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
+    position: relative;
 }
 h1 {
     margin: 0;
@@ -62,75 +64,24 @@ p {
     margin: 0;
     padding: 0;
 }
-
-
-.body-nav {
-    padding: 50px;
-    color: #1B1C21;
-}
-.body-nav > h1 {
-    position: relative;
-    width: 250px;
-    transition-duration: 3s;
-}
-.body-nav > h1::after,
-.body-nav > h1::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 5px;
-    background-color: #1B1C21;
-    transition: opacity 1s, transform 3s 1s;
-    opacity: 0;
-}
-.body-nav > h1::before {
-    left: -10px;
-}
-.body-nav > h1::after {
-    right: 4px;
-}
-.body-nav > h1:hover::before {
-    opacity: 1;
-    transform: translateX(250px);
-}
-.body-nav > h1:hover::after {
-    opacity: 1;
-    transform: translateX(-250px);
-}
-.h2-styles a {
-    cursor: pointer;
-}
-.h2-styles h2 {
+.wrapper {
+    overflow: hidden;
     position: relative;
 }
-.h2-styles h2::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 10%;
-    height: 4px;
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateY(10px);
-    opacity: 0;
-    background-color: #1B1C21;
-}
-.h2-styles h2:hover::after {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 
-.swiper {
+/* #1 Слайдер брендов */
+.swiper-brands {
     width: 240px;
     margin: 0;
     overflow: visible;
     padding-left: 16px;
+    position: relative;
 }
 .swiper-wrapper {
     box-sizing: border-box;
 }
-.swiper-slide {
+.swiper-brands_slide {
     height: 72px;
     display: flex;
     align-items: center;
@@ -139,18 +90,19 @@ p {
     padding-left: 16px;
     background-color: #fff;
 }
-.swiper-button-next {
+.swiper-brands__swiper-button-next {
     width: 40px;
     height: 40px;
     background-image: url("img/arrow_forward.png");
     right: 20px;
-    top: 36%;
+    top: 53%;
 }
 .swiper-button-next:after {
     display: none;
 }
-.swiper-pagination {
+.swiper-brands__swiper-pagination {
     position: static;
+    text-align: center;
     margin-top: 16px;
 }
 .swiper-pagination-bullet {
@@ -163,8 +115,134 @@ p {
 }
 
 
+/* #2 Слайдер видов техники */
+.swiper-devices {
+    width: 240px;
+    margin: 0;
+    overflow: visible;
+    padding-left: 16px;
+    position: relative;
+}
+.swiper-slide-devices {
+    height: 160px;
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    padding: 16px 0 0 16px;
+}
+.swiper-devices__swiper-button-next {
+    width: 40px;
+    height: 40px;
+    background-image: url("img/arrow_forward.png");
+    right: 16px;
+    top: 77%;
+}
+.swiper-devices__swiper-pagination {
+    position: static;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* #3 Слайдер видов техники */
+.swiper-prices {
+    width: 260px;
+    margin: 0;
+    overflow: visible;
+    padding-left: 16px;
+}
+.swiper-slide-prices {
+    padding: 16px;
+    position: relative;
+    width: 260px;
+    height: 200px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.swiper-prices__swiper-pagination {
+    position: static;
+    text-align: center;
+    margin-top: 16px;
+}
+
+
+
+.swiper-slide-prices__header {
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    opacity: 0.72;
+    margin-bottom: 4px;
+}
+.swiper-slide-prices__text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    margin-bottom: 16px;
+}
+.swiper-slide-prices__text:last-child {
+    margin-bottom: 0;
+}
+.swiper-slide-prices__button {
+    width: 119px;
+    height: 32px;
+    background: #FF3E79;
+    border-radius: 16px;
+    border: none;
+}
+.swiper-slide-prices .swiper-slide-prices__button {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+.swiper-slide-prices__button-text {
+    position: relative;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.swiper-slide-prices__button-text::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-radius: 2px;
+    transform: rotate(-135deg);
+    right: 11px;
+    top: 8px;
+}
+
+
 @media (min-width: 550px) {
-    .swiper {
+    .swiper-brands {
         display: none;
     }
+    .swiper-brands__swiper-pagination {
+        display: none;
+    }
+
+    .swiper-devices {
+        display: none;
+    }
+    .swiper-devices__swiper-pagination {
+        display: none;
+    }
+}
+
+@media (min-width: 750px) {
+    .swiper-prices {
+        display: none;
+    }
+    .swiper-prices__swiper-pagination {
+        display: none;
+    }
+}
+
+@media (min-width: 750px) {
+    
 }

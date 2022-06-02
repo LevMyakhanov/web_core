@@ -1,16 +1,18 @@
 .menu {
-    /* position: fixed; */
+    position: fixed;
+    left: -320px;
+    background-color: #fff;
+    min-width: 320px;
     width: 320px;
-    height: 1024px;
     font-family: 'TT Lakes Regular', sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
-    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
     padding-bottom: 32px;
     display: flex;
     flex-direction: column;
+    z-index: 12;
 }
 .menu-padding {
     padding-left: 24px;
@@ -95,7 +97,7 @@ input[type="radio"] {
     font-size: 24px;
     line-height: 32px;
     letter-spacing: -0.6px;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
 }
 .menu-footer__langes {
     display: flex;
@@ -111,4 +113,25 @@ input[type="radio"] {
 }
 .menu-footer__lang_active {
     color: #7E7E82;
+}
+
+@media (min-width: 321px) {
+    .menu {
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    }
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        display: flex;
+    }
+    .menu {
+        position: static;
+        box-shadow: none;
+        z-index: 0;
+    }
+    .menu-footer {
+        margin-top: 240px;
+    }
 }

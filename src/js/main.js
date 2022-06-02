@@ -1,10 +1,10 @@
-export let button = document.querySelector(".main__button");
-export let mainText = document.querySelector(".main__text_hidden");
-export let mainTextNext = document.querySelector(".main__text_next");
-export let mainTextHide = document.querySelector(".main__text_hide");
-export let number = 1;
+let button = document.querySelector(".main__button");
+let mainText = document.querySelector(".main__text_hidden");
+let mainTextNext = document.querySelector(".main__text_next");
+let mainTextHide = document.querySelector(".main__text_hide");
+let number = 1;
 
-export function toggleText () {
+function toggleText () {
     mainText.classList.toggle("main__text")
     mainText.classList.toggle("main__text_hidden")
     
@@ -21,3 +21,39 @@ export function toggleText () {
         return number;
     }
 }
+
+export let listenMain = function () {
+    if(button) {
+        button.addEventListener('click', toggleText)
+    }
+}
+
+let menuButtons = document.querySelectorAll(".menu-button-header");
+let menu = document.querySelector(".menu");
+let menuBack = document.querySelector(".back");
+
+function showMenu () {
+    menu.style.left = 0;
+    menuBack.style.left = 0;
+}
+
+export let listenMenu = function () {
+    for (let index = 0; index < menuButtons.length; index++) {
+        menuButtons[index].addEventListener('click', showMenu)
+    }
+}
+
+
+
+let menuButtonCancel = document.querySelector(".menu__cancel");
+
+function hideMenu () {
+    menu.style.left = '-320px';
+    menuBack.style.left = '-100%';
+}
+
+export let listenMenu2 = function () {
+    menuButtonCancel.addEventListener('click', hideMenu)
+    menuBack.addEventListener('click', hideMenu)
+}
+

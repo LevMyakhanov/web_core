@@ -1,0 +1,102 @@
+.modal-feedback, 
+.modal-call {
+    background-color: #fff;
+    min-width: 320px;
+    width: 320px;
+    font-family: 'TT Lakes Regular', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    padding: 24px 16px 75px 16px;
+    position: fixed;
+    right: -440px;
+    z-index: 14;
+}
+.modal-feedback__form {
+    position: relative;
+}
+.modal-feedback__cancel {
+    margin-bottom: 32px;
+}
+.modal-call__cancel {
+    margin-bottom: 32px;
+}
+.modal-feedback__header {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    position: relative;
+    margin-bottom: 24px;
+}
+.modal-feedback__header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: 4px;
+    height: 32px;
+    background-color: #41F6D7;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.modal-feedback__input {
+    width: 288px;
+    height: 48px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #B5B6BC;
+}
+.modal-feedback__message {
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+}
+.modal-feedback__pink-text {
+    color: #FF3E79;
+}
+
+
+
+.modal-feedback__button {
+    position: relative;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #FF3E79;
+    border-radius: 16px;
+    border: none;
+    box-sizing: border-box;
+    padding: 4px 35px 4px 14px;
+    float: right;
+    margin-top: 19px;
+}
+.modal-feedback__button::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-radius: 2px;
+    transform: rotate(-135deg);
+    right: 20px;
+    top: 12px;
+}
+
+
+
+@media (min-width: 1200px) {
+    .modal-feedback,
+    .modal-call {
+        width: 440px;
+    }
+}

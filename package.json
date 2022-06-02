@@ -4,6 +4,7 @@
   "description": "web core site",
   "main": "index.js",
   "dependencies": {
+    "postcss-preset-env": "^7.6.0",
     "swiper": "^8.1.5"
   },
   "devDependencies": {
@@ -12,6 +13,10 @@
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
