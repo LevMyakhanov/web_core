@@ -560,6 +560,9 @@ a p {
     .main_img {
         width: 50%;
     }
+    .footer {
+        padding: 19px 24px;
+    }
     .footer__item {
         width: 33%;
         justify-content: flex-start;
