@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     margin-right: -24px;
     margin-bottom: -16px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .brands__hidden {
     max-height: 200px;
@@ -32,7 +32,7 @@
     flex-wrap: wrap;
     margin-right: -24px;
     margin-bottom: -16px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .brands__item {
     position: relative;
@@ -58,6 +58,7 @@
 .buttons-show-hide {
     display: none;
     margin-top: 24px;
+    cursor: pointer;
 }
 .button-brands_show {
     position: relative;
@@ -140,6 +141,15 @@
     }
     .buttons-show-hide {
         display: block;
+    }
+}
+
+@media (min-width: 1000px) {
+    .brands {
+        justify-content: flex-start;
+    }
+    .brands__hidden {
+        justify-content: flex-start;
     }
 }
 /*!**********************************************************************!*\
@@ -465,6 +475,7 @@ a p {
     color: #1B1C21;
     display: block;
     margin-bottom: 40px;
+    font-weight: 700;
 }
 .footer__offer::after {
     content: "";
@@ -490,6 +501,10 @@ a p {
     justify-content: center;
     padding: 16px;
     text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    opacity: 0.72;
 }
 
 
@@ -554,6 +569,20 @@ a p {
     .main_img {
         width: 50%;
     }
+    .footer__item {
+        width: 33%;
+        justify-content: flex-start;
+        padding: 16px 0 0 0;
+    }
+    .footer__item:nth-child(2) {
+        justify-content: center;
+    }
+    .footer__item:first-child {
+        text-align: left;
+    }
+    .footer__item:last-child {
+        text-align: right;
+    }
 }
 
 @media (min-width: 800px) {
@@ -590,6 +619,9 @@ a p {
         padding: 0 24px 19px 24px ;
         margin-top: 20px;
     }
+    .main__menu {
+        overflow-x: hidden;
+    }
 }
 /*!********************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!./styles/menu.css ***!
@@ -600,6 +632,7 @@ a p {
     background-color: #fff;
     min-width: 320px;
     width: 320px;
+    height: 100%;
     font-family: 'TT Lakes Regular', sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -727,6 +760,7 @@ input[type="radio"] {
         position: static;
         box-shadow: none;
         z-index: 0;
+        height: auto;
     }
     .menu__cancel {
         display: none;
@@ -1304,6 +1338,7 @@ body {
   letter-spacing: -0.2px;
   position: relative;
   background-color: #F8F8F8;
+  overflow-x: hidden;
 }
 
 h1 {
