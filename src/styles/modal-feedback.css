@@ -12,6 +12,7 @@
     position: fixed;
     right: -440px;
     z-index: 14;
+    transition-duration: 2s;
 }
 .modal-feedback__form {
     position: relative;

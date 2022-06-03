@@ -19,7 +19,7 @@
     flex-wrap: wrap;
     margin-right: -24px;
     margin-bottom: -16px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .brands__hidden {
     max-height: 200px;
@@ -29,7 +29,7 @@
     flex-wrap: wrap;
     margin-right: -24px;
     margin-bottom: -16px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .brands__item {
     position: relative;
@@ -55,6 +55,7 @@
 .buttons-show-hide {
     display: none;
     margin-top: 24px;
+    cursor: pointer;
 }
 .button-brands_show {
     position: relative;
@@ -137,5 +138,14 @@
     }
     .buttons-show-hide {
         display: block;
+    }
+}
+
+@media (min-width: 1000px) {
+    .brands {
+        justify-content: flex-start;
+    }
+    .brands__hidden {
+        justify-content: flex-start;
     }
 }
