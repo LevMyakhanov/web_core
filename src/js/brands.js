@@ -8,26 +8,33 @@
 
 let buttons = document.querySelectorAll(".buttons-show-hide");
 
-export let listenBrand = function () {
+export let listenBrand = function (number) {
     buttons.forEach(button => {
         button.addEventListener('click', function () {
             let brandList = button.parentElement.querySelector('.brands__list')
-            let brandTextNext = button.querySelector(".button-brands_show");
-            let brandTextHide = button.querySelector(".button-brands_hide");
-
             brandList.classList.toggle("brands")
             brandList.classList.toggle("brands__hidden")
             
-            if (brandTextNext) {
-                brandTextNext.style.display = 'none';
-                brandTextHide.style.display = 'block';
-                return brandTextHide;
+
+            let textShowHide = function () {
+                let brandTextNext = button.querySelector(".button-brands_show");
+                let brandTextHide = button.querySelector(".button-brands_hide");
+                if (number === 1) {
+                    brandTextNext.style.display = 'none';
+                    brandTextHide.style.display = 'block';
+                    number = 0
+                    return number;
+                } 
+                if (number === 0) {
+                    brandTextNext.style.display = 'block';
+                    brandTextHide.style.display = 'none';
+                    number = 1;
+                    return number;
+                }
             }
-            if (brandTextHide) {
-                brandTextNext.style.display = 'block';
-                brandTextHide.style.display = 'none';
-                return brandTextNext;
-            }
+            
+            textShowHide()
+            
         })
     });
 }

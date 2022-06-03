@@ -1,6 +1,6 @@
 .menu {
     position: fixed;
-    left: -320px;
+    left: -400px;
     background-color: #fff;
     min-width: 320px;
     width: 320px;
@@ -130,6 +130,9 @@ input[type="radio"] {
         position: static;
         box-shadow: none;
         z-index: 0;
+    }
+    .menu__cancel {
+        display: none;
     }
     .menu-footer {
         margin-top: 240px;

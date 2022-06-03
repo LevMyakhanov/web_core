@@ -1,12 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'TT Lakes', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    background-color: #F8F8F8;
-}
 .back {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.96);
@@ -377,6 +368,7 @@ a p {
 }
 
 @media (min-width: 1200px) {
+    
     .header {
         display: none;
     }
@@ -385,5 +377,9 @@ a p {
     }
     .back {
         display: none;
+    }
+    .footer {
+        padding: 0 24px 19px 24px ;
+        margin-top: 20px;
     }
 }

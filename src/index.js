@@ -80,6 +80,6 @@ const deviceSlider = new Swiper('.swiper-prices', {
 listenMain();
 listenMenu();
 listenMenu2();
-listenBrand();
+listenBrand(1);
 listenModal();
 listenModal2();

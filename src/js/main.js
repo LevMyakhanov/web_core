@@ -48,7 +48,7 @@ export let listenMenu = function () {
 let menuButtonCancel = document.querySelector(".menu__cancel");
 
 function hideMenu () {
-    menu.style.left = '-320px';
+    menu.style.left = '-400px';
     menuBack.style.left = '-100%';
 }
 

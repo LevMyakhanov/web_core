@@ -18,18 +18,6 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: './index.html'
         }),
-        new HTMLWebpackPlugin({
-            filename: 'main.html',
-            template: './main.html'
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'menu.html',
-            template: './menu.html'
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'brands.html',
-            template: './brands.html'
-        }),
         new MiniCssExtractPlugin(),
         new CleanWebpackPlugin()
     ],
