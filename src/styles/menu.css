@@ -132,6 +132,7 @@ input[type="radio"] {
         position: static;
         box-shadow: none;
         z-index: 0;
+        height: auto;
     }
     .menu__cancel {
         display: none;
